@@ -47,7 +47,6 @@ body{
 .ersterBildBlock{
     width: 48%;
     height: 100%;
-    background-color: red;
 
 }
 .Lichtdom {
@@ -76,7 +75,6 @@ body{
 
 .zweiterBlock{
     width: 100%;
-    background-color: purple;
     gap: 5px;
 }
 
@@ -84,7 +82,6 @@ body{
     display: flex;
     margin-top: 20px;
     justify-content: center;
-    background-color: aqua;
 }
 
 .gesichte{
@@ -124,7 +121,6 @@ body{
 
 .zweiterContainer2{
     margin-top: 20px;
-    background-color: aqua;
 }
 
 .zweiterContainerUntertitel{
