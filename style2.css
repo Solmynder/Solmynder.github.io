@@ -1,19 +1,21 @@
-body{
+body {
     background-image: url("images/textura.jpg");
-    margin: 10px;
-    margin: 0 auto;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    background-attachment: fixed;
 }
 
-.Rastercontainer{
+.Rastercontainer {
     width: 1050px;
-    height: 4600px;
+    min-height: 4600px; 
     border: 10px solid #868C96;
     background-color: #43464B;
-    margin: auto;
+    margin: 20px auto;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20px;
-
+    box-sizing: border-box;
 }
 
 .Überschrift{
