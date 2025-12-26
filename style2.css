@@ -2,6 +2,8 @@ body{
     background-image: url("./images/textura.jpg");
     margin: 10px;
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Rastercontainer{
