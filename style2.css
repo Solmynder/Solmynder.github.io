@@ -1,0 +1,249 @@
+body{
+    background-image: url("/home/solmynder/Рабочий стол/html/images/textura.jpg");
+    margin: 10px;
+}
+
+.Rastercontainer{
+    width: 1050px;
+    height: 4600px;
+    border: 10px solid #868C96;
+    background-color: #43464B;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+.Überschrift{
+    border: 2px solid gold;
+    text-align: center;
+    background-color: black;
+    margin-bottom: 50px;
+}
+
+.Titel{
+    color: gold;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.Untertitel{
+    color: gold;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+/*//////////////////////////////////////////////////////*/
+
+.ersterBlock{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    gap: 5px;
+    padding-bottom: 75px;
+}
+
+.ersterBildBlock{
+    width: 48%;
+    height: 100%;
+    background-color: red;
+
+}
+.Lichtdom {
+    width: 100%;
+    height: 100%;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+}
+
+.ersterText{
+    padding: 10px;
+    display: flex;
+    white-space: pre-line;
+    align-items: center;
+    width: 48%;
+    height: 94%;
+    background-color: black;
+    color: #BFC8D6;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+/*//////////////////////////////////////////////////////*/
+
+.zweiterBlock{
+    width: 100%;
+    background-color: purple;
+    gap: 5px;
+}
+
+.zweiterContainer1{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.gesichte{
+    height: 500px;
+    width: 300px;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+}
+
+.nord{
+    height: 500px;
+    width: 300px;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+}
+
+.zweiterBlockTitel{
+    background-color: black;
+    text-align: center;
+    border: 2px solid #1F3C88;
+    color: #1F3C88;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.zweiterText1{
+    width: 350px;
+    white-space: pre-line;
+    align-items: center;
+    background-color: black;
+    color: #BFC8D6;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.zweiterContainer2{
+    margin-top: 20px;
+    background-color: aqua;
+}
+
+.zweiterContainerUntertitel{
+    display: flex;
+    justify-content: center;
+    color: #BFC8D6;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: black;
+    border: 2px solid #BFC8D6;
+    padding: 5px;
+}
+
+.zweiterText2{
+    width: 40%;
+    white-space: pre-line;
+    background-color: black;
+    color: #BFC8D6;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.Volkshalle{
+    width: 600px;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+}
+
+.box1{
+    display: flex;
+    text-align: center;
+}
+
+
+/*//////////////////////////////////////////////////////*/
+
+.dritterBlockTitel{
+    margin-top: 75px;
+    background-color: black;
+    text-align: center;
+    border: 2px solid #1F3C88;
+    color: #1F3C88;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;     
+    gap: 20px;
+}
+
+.Breitspurbahn{
+    height: 500px;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+}
+
+.dritterText1{
+    width: 100%;
+    white-space: pre-line;
+    background-color: black;
+    color: #BFC8D6;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.Breitspurbahn2{
+    max-width: 100%;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+}
+
+/*//////////////////////////////////////////////////////*/
+
+.vierterBlockTitel{
+    margin-top: 75px;
+    background-color: black;
+    text-align: center;
+    border: 2px solid #1F3C88;
+    color: #1F3C88;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.atlantropa1{
+    max-width: 100%;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;     
+    gap: 20px;
+}
+
+.atlantropa2{
+    max-width: 100%;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+}
+
+.vierterText1{
+    width: 100%;
+    white-space: pre-line;
+    background-color: black;
+    color: #BFC8D6;
+    outline: 2px solid #BFC8D6;
+    outline-offset: -2px;
+    font-size: 20px;
+    padding: 10px;
+}
