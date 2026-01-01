@@ -1,0 +1,292 @@
+/* --- Global Styles --- */
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --accent: #FFD700; /* Gold/Yellow from German flag */
+    --accent-hover: #DD0000;
+    --modal-bg: rgba(0, 0, 0, 0.85);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+header {
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Map Section --- */
+#map-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.map-placeholder {
+    background-color: var(--bg-card);
+    border: 1px dashed #444;
+    border-radius: 10px;
+    min-height: 400px; /* Space for the map */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* Стиль для всех путей (земель) внутри SVG */
+svg path {
+    stroke: #FFD700;       /* Золотой цвет (можно использовать #D4AF37 для более темного золота) */
+    stroke-width: 1.5px;   /* Толщина линии */
+    fill: #333333;         /* Цвет заливки земли (темный фон лучше контрастирует с золотом) */
+    
+    /* Опционально: плавное изменение цвета при наведении */
+    transition: all 0.3s ease; 
+}
+
+/* Эффект при наведении мыши на землю */
+svg path:hover {
+    fill: #555555;         /* Земля становится чуть светлее */
+    stroke: #FFFFFF;       /* Или меняется цвет границы */
+    cursor: pointer;
+}
+
+.instruction-text {
+    color: #555;
+    font-weight: 600;
+}
+
+/* --- NEW MAP STYLES: Making the map paths yellow --- */
+/* Нацеливаемся на все элементы <path> внутри SVG-карты по ID */
+#map-germany path {
+    /* Заливка цветом акцента (золотой/желтый), !important переопределяет инлайн-стили */
+    fill: var(--accent) !important; 
+    /* Обводка — темный фон для разделения земель */
+    stroke: var(--bg-dark) !important; 
+    stroke-width: 2 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении (hover) */
+#map-germany path:hover {
+    /* Используем более светлый желтый для эффекта */
+    fill: var(--accent-hover) !important;
+    /* Черная обводка */
+    stroke: #000000 !important; 
+    stroke-width: 3 !important;
+}
+/* --- END NEW MAP STYLES --- */
+
+
+/* --- Buttons Grid Section --- */
+#buttons-section {
+    padding-bottom: 80px;
+}
+
+#buttons-section h2, #map-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.state-btn {
+    background-color: var(--bg-card);
+    border: 1px solid #333;
+    color: var(--text-main);
+    padding: 20px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.state-btn:hover {
+    background-color: #2a2a2a;
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(255, 215, 0, 0.1);
+}
+
+/* --- Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-bg);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    margin: 5% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: var(--accent);
+}
+
+.modal-header {
+    padding: 30px 40px 10px;
+    border-bottom: 1px solid #333;
+}
+
+#modal-title {
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+.german-subtitle {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.modal-body {
+    padding: 30px 40px;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #444;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Text Content */
+.quote-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #252525;
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+}
+
+.quote-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.quote-trans {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery img {
+        height: 200px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
